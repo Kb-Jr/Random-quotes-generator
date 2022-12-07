@@ -2,9 +2,8 @@
  Generate random quotes and share to Twitter
 
 
-
 # About
-A single page to generate and display a Random quote fetched from a quotes API by clicking a button and also share on Twitter if logged in.
+A single web page to generate and display a Random quote fetched from a quotes API by clicking a button and also share on Twitter if logged in.
 
 ## Table of contents
 
@@ -20,21 +19,32 @@ A single page to generate and display a Random quote fetched from a quotes API b
 
 ### Screenshot
 
-![Desktop screenshot](./design/desktop-design.png)
-![Mobile screenshot](./design/mobile-design.png)
-![Mobile menu screenshot](./design/mobile-menu.png)
+![Desktop screenshot](./desktop-1.png)
+![Desktop screenshot](./desktop-2.png)
+![Mobile screenshot](./mobile-ipad.png)
 
 
 ### Links
 
-- Solution URL: [Click here](https://github.com/Kb-Jr/News-Homepage.git)
-- Live Site URL: [Click here](https://kb-jr.github.io/News-Homepage/)
+- Live Site URL: [Click here](https://kb-jr.github.io/Random-quotes-generator/)
 
 ## My process
 
-This project was split into 3 parts; The NAvigation bar, the main body and the footer. The Navigation bar contained the Logo and navigation links. The main body had an image, an aside and two articles. The foot section had 3 articles. The layout for all 3 parts were implemented using CSS grid and CSS flexbox was used in combination to help with the alignment and spacing of elements within the different parts. A single Media query was used to specify how the design should appear on smaller devices.
+#### Interface:
+- Build User interface using HTML5 and CSS custom properties.
+- Create loader animation using CSS animations
+- Import font type from Google fonts API
+- Import icons like Quote icon and twitter icon from Fontawesome
 
-Some CSS animations and Javascript were used to implement the responsive navigation menu. This was done partly by specifying rules to toggle between the display at different screen sizes.
+#### Behavior:
+- Create an asynchronous function to retrieve quotes from the Quotes API. This is done by fetching data from the API url in JSON format. This returns an array of several objects with text and author properties.
+
+- Create a function to generate a random quote and dynamically populate the interface with quotes and Authors. This is done by using the 'math.random' method on the quotes object retrieevd from the API and storing the result quote in a variable. The quote text property is then used to update the text content of the field created for quotes in the interface (Apply same step to retrieve quote authors and update the interface). Additional conditions are also added to manioulate the contents being displayed such as the font size and placeholder text in the event that an author is not available. This is done using if else statements.
+
+- Create a function to share quote directly to twitter. Do this by storing the twitter sharing link and passing in the content to be shared as a text parameter using template literal syntax in a variable. Template literal syntax allows you to pass in variables as string format. Open the variable using window.open and specify '_blank' in order for twitter to open in a new tab.
+
+- Add eevnt listeners to the new quote and tweet buttons such that when clicked, the new quote and tweet quote functions will be run respectively.
+
 
 
 ### Built with
@@ -46,16 +56,11 @@ Some CSS animations and Javascript were used to implement the responsive navigat
 - Desktop-first workflow
 
 
-### What I learned
-
-In this project i was able to practice using some semantic HTML5 tags, some css animation properties and using Javascript functions.
-
-
 ### Useful resources
 
 - [api for quotes](https://type.fit/api/quotes) - This link is an API which contains an array of several quotes.
 
-- [url to share on twitter](https:twitter.com/intent/tweet) - Use this link in addition with other parameters to share specified content to twitter. For more info on the required parameters, visit https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/guides/web-intent.
+- [url to share on twitter](https:twitter.com/intent/tweet) - Use this link in addition with other query parameters to share specified content to twitter. For more info on query parameters, visit https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/guides/web-intent.
 
 - [to create a loader](https://www.w3schools.com/howto/howto_css_loader.asp) - Code snippets from here was used to build a customized loader
 
