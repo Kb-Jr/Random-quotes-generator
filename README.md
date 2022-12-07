@@ -19,9 +19,9 @@ A single web page to generate and display a Random quote fetched from a quotes A
 
 ### Screenshot
 
-![Desktop screenshot](./desktop-1.png)
-![Desktop screenshot](./desktop-2.png)
-![Mobile screenshot](./mobile-ipad.png)
+![Desktop screenshot](./Desktop-1.png)
+![Desktop screenshot](./Desktop-2.png)
+![Mobile screenshot](./Mobile-Ipad.png)
 
 
 ### Links
