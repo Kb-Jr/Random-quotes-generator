@@ -60,7 +60,7 @@ async function getQuotes(){
 
 
 function sharetweet(){
-    twitterUrl = `https:twitter.com/intent/tweet?text= ${quoteText.textContent} ${quoteAuthor.textContent}`;
+    const twitterUrl = `https:twitter.com/intent/tweet?text= ${quoteText.textContent} ${quoteAuthor.textContent}`;
     window.open(twitterUrl);
 }
 
