@@ -23,10 +23,10 @@ function newQuotes(){
     const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
     
     if (!quote.author){
-        quoteAuthor.textContent = '- Unspecified Author'
+        quoteAuthor.textContent = 'Unspecified Author'
     }
     else{
-        quoteAuthor.textContent = ` - ${quote.author}`;
+        quoteAuthor.textContent = quote.author;
     }
 
     if (quote.text.length > 100){
@@ -60,7 +60,7 @@ async function getQuotes(){
 
 
 function sharetweet(){
-    const twitterUrl = `https:twitter.com/intent/tweet?text= ${quoteText.textContent} ${quoteAuthor.textContent}`;
+    const twitterUrl = `https:twitter.com/intent/tweet?text= ${quoteText.textContent} - ${quoteAuthor.textContent}`;
     window.open(twitterUrl);
 }
 
